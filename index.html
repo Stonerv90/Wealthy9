@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html style="background:#02040F;margin:0;padding:0">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wealthy9 — Premium Digital Marketing</title>
+<meta name="description" content="Wealthy9 is a premium digital marketing agency based in Miami, Florida. We grow businesses that refuse to be invisible.">
+<style>
+html,body{background:#02040F!important;color:#F0F4FF!important;margin:0!important;padding:0!important;font-family:Georgia,serif;overflow-x:hidden}
+*{box-sizing:border-box}
+a{text-decoration:none}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:20px 28px;background:#02040F;border-bottom:1px solid rgba(0,200,240,0.1)}
+.logo{font-size:18px;font-weight:400;letter-spacing:.3em;color:#F0F4FF;text-transform:uppercase}
+.logo span{color:#00C8F0}
+.nav-btn{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#02040F;background:#00C8F0;padding:10px 18px;font-family:Arial,sans-serif}
+.hero{min-height:100vh;background:#02040F!important;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:100px 28px 60px}
+.kicker{font-size:10px;letter-spacing:.4em;color:#00C8F0;text-transform:uppercase;margin-bottom:32px;font-family:Arial,sans-serif}
+.h1{font-size:clamp(52px,13vw,130px);font-weight:400;line-height:.9;letter-spacing:.06em;text-transform:uppercase;margin-bottom:32px}
+.ghost{display:block;-webkit-text-stroke:1px rgba(240,244,255,0.2);color:transparent;font-style:italic}
+.cy{display:block;color:#00C8F0}
+.sub{font-size:17px;font-style:italic;color:rgba(240,244,255,0.45);max-width:360px;line-height:1.8;margin-bottom:44px}
+.cta{font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:#02040F;background:#00C8F0;padding:16px 40px;display:inline-block;font-family:Arial,sans-serif}
+.note{font-size:9px;letter-spacing:.18em;color:rgba(240,244,255,0.25);text-transform:uppercase;margin-top:14px;display:block;font-family:Arial,sans-serif}
+.divr{display:flex;align-items:center;padding:0 28px;background:#02040F}
+.dl{flex:1;height:1px;background:rgba(240,244,255,0.06)}
+.dd{width:4px;height:4px;border-radius:50%;background:#00C8F0;margin:0 16px;box-shadow:0 0 8px #00C8F0}
+
+/* INDUSTRIES TICKER */
+.ticker{background:#060914!important;border-top:1px solid rgba(0,200,240,0.08);border-bottom:1px solid rgba(0,200,240,0.08);padding:14px 0;overflow:hidden}
+.ticker-inner{display:flex;animation:tick 25s linear infinite;white-space:nowrap}
+.tick-item{font-size:10px;letter-spacing:.2em;color:rgba(138,155,191,1);text-transform:uppercase;padding:0 36px;flex-shrink:0;font-family:Arial,sans-serif}
+.tick-item span{color:#00C8F0}
+@keyframes tick{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+.sec{padding:72px 28px;background:#02040F!important}
+.sec.dark{background:#060914!important;border-top:1px solid rgba(240,244,255,0.04)}
+.sl{font-size:9px;letter-spacing:.3em;color:#00C8F0;text-transform:uppercase;margin-bottom:18px;font-family:Arial,sans-serif}
+.bq{font-size:clamp(26px,5vw,44px);font-weight:400;line-height:1.25}
+.bq em{font-style:italic;color:#00C8F0}
+.bt{font-size:14px;color:rgba(138,155,191,1);line-height:1.9;margin-top:24px;font-family:Arial,sans-serif}
+
+/* INDUSTRY CARDS */
+.industry-grid{display:flex;flex-direction:column;gap:2px;margin-top:40px}
+.ind-card{background:#060914!important;padding:24px 22px;border-left:2px solid rgba(0,200,240,0.15);transition:border-color .3s}
+.ind-card:hover{border-color:#00C8F0}
+.ind-icon{font-size:22px;margin-bottom:10px}
+.ind-name{font-size:18px;font-weight:400;letter-spacing:.03em;margin-bottom:6px}
+.ind-desc{font-size:13px;color:rgba(138,155,191,1);line-height:1.6;font-family:Arial,sans-serif}
+
+.stitle{font-size:clamp(32px,6vw,56px);font-weight:400;line-height:1.1;margin-bottom:40px}
+.stitle em{font-style:italic;color:rgba(240,244,255,0.25)}
+.svc{padding:24px 0;border-bottom:1px solid rgba(240,244,255,0.05)}
+.svc-num{font-size:11px;color:rgba(0,200,240,0.35);letter-spacing:.1em;margin-bottom:6px;font-family:Arial,sans-serif}
+.svc-name{font-size:22px;font-weight:400;letter-spacing:.03em;margin-bottom:6px}
+.svc-desc{font-size:13px;color:rgba(138,155,191,1);line-height:1.7;font-family:Arial,sans-serif}
+.proc{background:#060914!important;padding:28px;margin-bottom:2px}
+.pn{font-size:52px;font-weight:400;color:rgba(0,200,240,0.07);line-height:1;margin-bottom:16px}
+.pt{font-size:20px;font-weight:400;letter-spacing:.03em;margin-bottom:8px}
+.pd{font-size:13px;color:rgba(138,155,191,1);line-height:1.75;font-family:Arial,sans-serif}
+.pc{background:#02040F!important;padding:36px 28px;margin-bottom:2px;position:relative}
+.pc.hot{background:#0D1635!important}
+.hot-tag{position:absolute;top:18px;right:18px;font-size:9px;letter-spacing:.2em;color:#02040F;background:#00C8F0;padding:4px 10px;text-transform:uppercase;font-family:Arial,sans-serif}
+.tier{font-size:9px;letter-spacing:.28em;color:#00C8F0;text-transform:uppercase;margin-bottom:20px;font-family:Arial,sans-serif}
+.price{font-size:60px;font-weight:400;line-height:1;color:#F0F4FF;margin-bottom:4px}
+.price sup{font-size:22px;color:rgba(138,155,191,1);vertical-align:super}
+.per{font-size:10px;letter-spacing:.15em;color:rgba(138,155,191,1);text-transform:uppercase;margin-bottom:24px;font-family:Arial,sans-serif}
+.pdiv{height:1px;background:rgba(240,244,255,0.07);margin-bottom:20px}
+.feat{list-style:none;margin-bottom:32px;padding:0}
+.feat li{font-size:13px;color:rgba(138,155,191,1);padding:8px 0;border-bottom:1px solid rgba(240,244,255,0.04);display:flex;gap:12px;font-family:Arial,sans-serif}
+.feat li::before{content:’—’;color:rgba(0,200,240,0.4);flex-shrink:0}
+.pbtn{display:block;text-align:center;font-size:10px;letter-spacing:.22em;text-transform:uppercase;padding:14px 0;font-family:Arial,sans-serif}
+.pbtn-g{color:#00C8F0;border:1px solid rgba(0,200,240,0.2)}
+.pbtn-s{color:#02040F;background:#00C8F0}
+.closing{background:#02040F!important;min-height:70vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:72px 28px}
+.ct{font-size:clamp(52px,13vw,110px);font-weight:400;line-height:.9;text-transform:uppercase;margin-bottom:32px}
+.ct em{font-style:italic;color:rgba(240,244,255,0.2);display:block}
+.cs{font-size:16px;font-style:italic;color:rgba(240,244,255,0.4);max-width:320px;line-height:1.8;margin-bottom:40px;font-family:Arial,sans-serif}
+.ccta{font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:#02040F;background:#00C8F0;padding:16px 44px;display:inline-block;font-family:Arial,sans-serif}
+.cemail{font-size:12px;letter-spacing:.12em;color:rgba(138,155,191,1);margin-top:18px;display:block;font-family:Arial,sans-serif}
+footer{background:#060914!important;border-top:1px solid rgba(240,244,255,0.06);padding:32px 28px;text-align:center}
+.flogo{font-size:18px;letter-spacing:.3em;color:#F0F4FF;text-transform:uppercase;margin-bottom:6px}
+.flogo span{color:#00C8F0}
+.ftag{font-size:9px;letter-spacing:.18em;color:rgba(138,155,191,1);text-transform:uppercase;font-family:Arial,sans-serif}
+.stats{display:flex;flex-direction:column;gap:28px;margin-top:40px}
+.stat{border-left:1px solid rgba(0,200,240,0.2);padding-left:22px}
+.sn{font-size:48px;font-weight:400;color:#00C8F0;line-height:1}
+.sl2{font-size:9px;letter-spacing:.2em;color:rgba(138,155,191,1);text-transform:uppercase;margin-top:5px;font-family:Arial,sans-serif}
+</style>
+
+</head>
+<body>
+
+<nav>
+  <div class="logo">WEALT<span>H</span>Y<span>9</span></div>
+  <a href="#contact" class="nav-btn">Free Audit</a>
+</nav>
+
+<section class="hero">
+  <div class="kicker">Miami, Florida · Premium Digital Marketing</div>
+  <h1 class="h1">Wealthy<span style="color:#00C8F0">9</span><br><span class="ghost">The Agency</span><br><span class="cy">They Call.</span></h1>
+  <p class="sub">Premium digital marketing for businesses that refuse to be invisible.</p>
+  <a href="#contact" class="cta">Get Your Free Audit</a>
+  <span class="note">No cost · No obligation · Just honest data</span>
+</section>
+
+<!-- TICKER -->
+
+<div class="ticker">
+  <div class="ticker-inner">
+    <span class="tick-item">Hospitals <span>·</span></span>
+    <span class="tick-item">Law Firms <span>·</span></span>
+    <span class="tick-item">Dental Practices <span>·</span></span>
+    <span class="tick-item">Police Departments <span>·</span></span>
+    <span class="tick-item">Medical Practices <span>·</span></span>
+    <span class="tick-item">Real Estate <span>·</span></span>
+    <span class="tick-item">Restaurants <span>·</span></span>
+    <span class="tick-item">Retail Brands <span>·</span></span>
+    <span class="tick-item">Professional Services <span>·</span></span>
+    <span class="tick-item">Hospitals <span>·</span></span>
+    <span class="tick-item">Law Firms <span>·</span></span>
+    <span class="tick-item">Dental Practices <span>·</span></span>
+    <span class="tick-item">Police Departments <span>·</span></span>
+    <span class="tick-item">Medical Practices <span>·</span></span>
+    <span class="tick-item">Real Estate <span>·</span></span>
+    <span class="tick-item">Restaurants <span>·</span></span>
+    <span class="tick-item">Retail Brands <span>·</span></span>
+    <span class="tick-item">Professional Services <span>·</span></span>
+  </div>
+</div>
+
+<div class="divr"><div class="dl"></div><div class="dd"></div><div class="dl"></div></div>
+
+<section class="sec">
+  <div class="sl">Our Belief</div>
+  <div class="bq">Every great business deserves a <em>digital presence</em> that matches its reputation.</div>
+  <p class="bt">Most businesses are doing extraordinary work that nobody can find online. That costs them clients, customers, and long-term growth every single day. Wealthy9 was built to close that gap — for any business ready to be taken seriously online.<br><br>Based in Miami. Serving businesses nationwide. Premium results — no exceptions.</p>
+  <div class="stats">
+    <div class="stat"><div class="sn">90</div><div class="sl2">Days to measurable results</div></div>
+    <div class="stat"><div class="sn">100%</div><div class="sl2">Premium focus — no shortcuts</div></div>
+    <div class="stat"><div class="sn">$0</div><div class="sl2">Cost for your initial audit</div></div>
+  </div>
+</section>
+
+<div class="divr"><div class="dl"></div><div class="dd"></div><div class="dl"></div></div>
+
+<!-- INDUSTRIES -->
+
+<section class="sec dark" id="industries">
+  <div class="sl">Who We Serve</div>
+  <h2 class="stitle">Every Industry.<br><em>One Standard.</em></h2>
+  <div class="industry-grid">
+    <div class="ind-card">
+      <div class="ind-icon">🏥</div>
+      <div class="ind-name">Hospitals & Health Systems</div>
+      <div class="ind-desc">Full-service social media management, paid advertising, and community growth for hospitals and health systems that deserve better visibility.</div>
+    </div>
+    <div class="ind-card">
+      <div class="ind-icon">⚖️</div>
+      <div class="ind-name">Law Firms</div>
+      <div class="ind-desc">Premium digital marketing that builds authority, drives client acquisition, and positions your firm as the top choice in your market.</div>
+    </div>
+    <div class="ind-card">
+      <div class="ind-icon">🦷</div>
+      <div class="ind-name">Dental Practices</div>
+      <div class="ind-desc">Content strategy, paid social ads, and community engagement that fills your appointment book and builds lasting patient relationships.</div>
+    </div>
+    <div class="ind-card">
+      <div class="ind-icon">🚔</div>
+      <div class="ind-name">Police & Government</div>
+      <div class="ind-desc">Community-focused digital marketing that builds public trust, increases transparency, and strengthens the relationship between departments and the people they serve.</div>
+    </div>
+    <div class="ind-card">
+      <div class="ind-icon">🏢</div>
+      <div class="ind-name">Professional Services</div>
+      <div class="ind-desc">Any business that takes its reputation seriously — we build the digital presence that reflects the quality of your work.</div>
+    </div>
+  </div>
+</section>
+
+<div class="divr"><div class="dl"></div><div class="dd"></div><div class="dl"></div></div>
+
+<section class="sec" id="services">
+  <div class="sl">What We Do</div>
+  <h2 class="stitle">Full-Service<br><em>Digital Marketing.</em></h2>
+  <div class="svc"><div class="svc-num">01</div><div class="svc-name">Social Media Management</div><div class="svc-desc">Content calendars, post creation, scheduling, and platform management across Instagram, Facebook, and LinkedIn — every month without you lifting a finger.</div></div>
+  <div class="svc"><div class="svc-num">02</div><div class="svc-name">Paid Social Advertising</div><div class="svc-desc">Geo-targeted campaigns reaching your community by zip code, demographics, and intent. Your customers are online — we make sure they find you.</div></div>
+  <div class="svc"><div class="svc-num">03</div><div class="svc-name">Content Strategy</div><div class="svc-desc">A custom framework built around your business, community, and brand voice — so every post has a purpose and a system behind it.</div></div>
+  <div class="svc"><div class="svc-num">04</div><div class="svc-name">Community Engagement</div><div class="svc-desc">Daily management of comments and DMs — building real relationships with your audience and protecting your reputation in real time.</div></div>
+  <div class="svc"><div class="svc-num">05</div><div class="svc-name">Brand Strategy</div><div class="svc-desc">Unified brand voice, visual identity, and messaging that makes your business look as premium as the service you deliver.</div></div>
+  <div class="svc" style="border-bottom:none"><div class="svc-num">06</div><div class="svc-name">Analytics & Reporting</div><div class="svc-desc">Monthly dashboards — reach, follower growth, engagement, and ROI. Clear numbers. No jargon. Just proof of what's working.</div></div>
+</section>
+
+<section class="sec dark" id="process">
+  <div class="sl">How It Works</div>
+  <h2 class="stitle">Results in<br><em>90 Days.</em></h2>
+  <div class="proc"><div class="pn">I</div><div class="pt">Free Audit</div><div class="pd">We audit your current digital presence, identify your top 5 gaps, and benchmark you against your closest competitors — at no cost to you.</div></div>
+  <div class="proc"><div class="pn">II</div><div class="pt">Strategy Build</div><div class="pd">A custom 90-day content strategy, calendar, and paid ad framework built specifically for your business and the community you serve.</div></div>
+  <div class="proc"><div class="pn">III</div><div class="pt">Launch</div><div class="pd">We go live within two weeks. Content created, scheduled, and managed. Paid campaigns launch and optimize weekly for maximum reach.</div></div>
+  <div class="proc"><div class="pn">IV</div><div class="pt">Report & Scale</div><div class="pd">Monthly reports show what's working. We refine, scale what's winning, and set targets for the next 90-day cycle.</div></div>
+</section>
+
+<section class="sec" id="pricing">
+  <div class="sl">Investment</div>
+  <h2 class="stitle">Transparent<br><em>Pricing.</em></h2>
+  <div class="pc">
+    <div class="tier">Growth</div>
+    <div class="price"><sup>$</sup>5,000</div>
+    <div class="per">Per Month</div>
+    <div class="pdiv"></div>
+    <ul class="feat">
+      <li>Social media management (2 platforms)</li>
+      <li>Monthly content calendar</li>
+      <li>12 posts per month</li>
+      <li>Basic paid social advertising</li>
+      <li>Monthly analytics report</li>
+      <li>Dedicated account manager</li>
+    </ul>
+    <a href="#contact" class="pbtn pbtn-g">Get Started</a>
+  </div>
+  <div class="pc hot" style="margin-top:2px">
+    <div class="hot-tag">Most Popular</div>
+    <div class="tier">Premium</div>
+    <div class="price"><sup>$</sup>7,500</div>
+    <div class="per">Per Month</div>
+    <div class="pdiv"></div>
+    <ul class="feat">
+      <li>Social media management (3 platforms)</li>
+      <li>Full content strategy & calendar</li>
+      <li>20 posts per month</li>
+      <li>Full paid social ad management</li>
+      <li>Daily community engagement</li>
+      <li>Monthly performance dashboard</li>
+      <li>Dedicated account manager</li>
+    </ul>
+    <a href="#contact" class="pbtn pbtn-s">Get Started</a>
+  </div>
+  <div class="pc" style="margin-top:2px">
+    <div class="tier">Enterprise</div>
+    <div class="price" style="font-size:44px">Custom</div>
+    <div class="per">Per Month</div>
+    <div class="pdiv"></div>
+    <ul class="feat">
+      <li>Multi-account management</li>
+      <li>Multilingual content strategy</li>
+      <li>Influencer & creator partnerships</li>
+      <li>Thought leadership series</li>
+      <li>Advanced paid social strategy</li>
+      <li>Weekly reporting & strategy calls</li>
+    </ul>
+    <a href="#contact" class="pbtn pbtn-g">Let's Talk</a>
+  </div>
+</section>
+
+<section class="closing" id="contact">
+  <div class="sl">Miami, Florida — Serving Nationwide</div>
+  <h2 class="ct">Start<br><em>Here.</em></h2>
+  <p class="cs">Request a free digital marketing audit. We'll show you exactly where your business stands — and what it's missing.</p>
+  <a href="mailto:contact@wealthy9.com" class="ccta">Request Free Audit</a>
+  <span class="cemail">contact@wealthy9.com</span>
+</section>
+
+<footer>
+  <div class="flogo">WEALTHY<span>9</span></div>
+  <div class="ftag">Premium Digital Marketing · Miami, Florida · 2025</div>
+</footer>
+
+</body>
+</html>
