@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Wealthy9 — Elite AI-Powered Digital Marketing Agency founded by LaBrian Edwards. Exclusive social media management, paid ads, and full digital marketing for elite businesses. Miami, FL.">
+<meta name="keywords" content="Wealthy9, LaBrian Edwards, luxury digital marketing agency Miami, exclusive social media management, premium paid ads, AI marketing, elite lead generation">
+<title>Wealthy9 | Elite Digital Marketing</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Outfit:wght@300;400;500;600;700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+:root{
+  --bg:#04060e;--bg2:#07091a;--surface:#0a0d1e;--surface2:#0f1228;
+  --border:rgba(255,255,255,0.06);--border2:rgba(255,255,255,0.1);
+  --cyan:#00c2ff;--blue:#3b6bff;--purple:#7c4dff;
+  --gold:#c9a84c;--gold2:#e8d5a0;
+  --gradient:linear-gradient(135deg,#00c2ff,#3b6bff,#7c4dff);
+  --gradient-gold:linear-gradient(135deg,#c9a84c,#e8d5a0,#c9a84c);
+  --white:#ffffff;--text:#e8ecf8;--muted:#555878;--muted2:#8890b0;
+  --glow:0 0 80px rgba(0,194,255,0.12);--glow2:0 0 60px rgba(59,107,255,0.18);
+  --glow-gold:0 0 40px rgba(201,168,76,0.2);
+}
+body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;overflow-x:hidden;line-height:1.6;}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:1;opacity:0.3;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");}
+.cursor-glow{position:fixed;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(59,107,255,0.03) 0%,transparent 70%);pointer-events:none;z-index:0;transform:translate(-50%,-50%);transition:left 1.2s ease,top 1.2s ease;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:80px;display:flex;align-items:center;justify-content:space-between;padding:0 60px;transition:all 0.5s;}
+nav.scrolled{background:rgba(4,6,14,0.92);backdrop-filter:blur(24px);border-bottom:1px solid var(–border);}
+.logo{font-family:‘Cormorant’,serif;font-size:1.6rem;font-weight:600;color:var(–white);text-decoration:none;letter-spacing:3px;text-transform:uppercase;}
+.logo span{background:var(–gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.nav-pills{display:flex;align-items:center;gap:0;background:rgba(255,255,255,0.03);border:1px solid var(–border);border-radius:99px;padding:5px;backdrop-filter:blur(10px);}
+.nav-pills a{padding:8px 20px;border-radius:99px;font-size:0.78rem;font-weight:500;color:var(–muted2);text-decoration:none;transition:all 0.25s;letter-spacing:0.5px;white-space:nowrap;}
+.nav-pills a:hover{color:var(–white);background:rgba(255,255,255,0.06);}
+.btn-nav{background:transparent;border:1px solid rgba(201,168,76,0.4);color:var(–gold2);padding:10px 26px;border-radius:99px;font-size:0.78rem;font-weight:600;text-decoration:none;transition:all 0.25s;letter-spacing:1px;text-transform:uppercase;}
+.btn-nav:hover{background:rgba(201,168,76,0.1);border-color:var(–gold);box-shadow:var(–glow-gold);}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;z-index:201;}
+.hamburger span{display:block;width:22px;height:1px;background:var(–white);border-radius:2px;transition:all 0.3s;}
+.mobile-menu{display:none;position:fixed;inset:0;background:rgba(4,6,14,0.98);backdrop-filter:blur(28px);z-index:199;flex-direction:column;align-items:center;justify-content:center;gap:40px;}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{font-family:‘Cormorant’,serif;font-size:2rem;font-weight:600;color:var(–white);text-decoration:none;letter-spacing:2px;text-transform:uppercase;}
+.m-close{position:absolute;top:28px;right:32px;font-size:1.5rem;color:var(–muted2);background:none;border:none;cursor:pointer;}
+
+/* HERO */
+#hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:140px 24px 100px;position:relative;overflow:hidden;}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(59,107,255,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(59,107,255,0.03) 1px,transparent 1px);background-size:80px 80px;mask-image:radial-gradient(ellipse 70% 70% at 50% 50%,black 10%,transparent 100%);}
+.orb{position:absolute;border-radius:50%;filter:blur(100px);pointer-events:none;}
+.orb1{width:700px;height:700px;background:rgba(59,107,255,0.08);top:-10%;left:50%;transform:translateX(-50%);}
+.orb2{width:300px;height:300px;background:rgba(0,194,255,0.05);bottom:15%;left:0%;}
+.orb3{width:250px;height:250px;background:rgba(124,77,255,0.07);bottom:20%;right:0%;}
+.orb-gold{width:400px;height:400px;background:rgba(201,168,76,0.04);top:30%;left:50%;transform:translateX(-50%);}
+.gold-line{width:60px;height:1px;background:var(–gradient-gold);margin:0 auto 32px;opacity:0.7;}
+.hero-eyebrow{font-family:‘DM Mono’,monospace;font-size:0.65rem;letter-spacing:4px;text-transform:uppercase;color:var(–gold);margin-bottom:24px;position:relative;z-index:2;animation:fadeDown 0.9s ease both;display:flex;align-items:center;gap:12px;justify-content:center;}
+.hero-eyebrow::before,.hero-eyebrow::after{content:’’;display:block;width:40px;height:1px;}
+.hero-eyebrow::before{background:linear-gradient(90deg,transparent,var(–gold));}
+.hero-eyebrow::after{background:linear-gradient(90deg,var(–gold),transparent);}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeUp2{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}
+h1{font-family:‘Cormorant’,serif;font-size:clamp(3rem,8vw,7rem);font-weight:300;line-height:1;letter-spacing:-1px;color:var(–white);max-width:900px;margin:0 auto 8px;position:relative;z-index:2;animation:fadeUp2 1s 0.1s ease both;}
+h1 strong{font-weight:600;}
+h1 .grad{background:var(–gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:600;}
+h1 em{font-style:italic;font-weight:300;color:rgba(255,255,255,0.35);}
+.hero-tagline{font-family:‘Cormorant’,serif;font-size:clamp(1.2rem,2.5vw,1.8rem);font-weight:300;font-style:italic;color:var(–gold2);opacity:0.7;margin-bottom:32px;position:relative;z-index:2;animation:fadeUp2 1s 0.15s ease both;letter-spacing:1px;}
+.hero-sub{font-size:0.92rem;color:var(–muted2);max-width:480px;margin:0 auto 52px;line-height:1.85;position:relative;z-index:2;animation:fadeUp2 1s 0.2s ease both;font-weight:300;}
+.hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;position:relative;z-index:2;margin-bottom:80px;animation:fadeUp2 1s 0.3s ease both;}
+.btn-main{background:var(–gradient);color:var(–white);padding:16px 40px;border-radius:99px;font-weight:600;font-size:0.82rem;text-decoration:none;transition:all 0.3s;box-shadow:0 0 60px rgba(59,107,255,0.25);letter-spacing:1.5px;text-transform:uppercase;}
+.btn-main:hover{transform:translateY(-3px);box-shadow:0 0 80px rgba(59,107,255,0.45);}
+.btn-gold{background:transparent;border:1px solid rgba(201,168,76,0.35);color:var(–gold2);padding:16px 40px;border-radius:99px;font-weight:500;font-size:0.82rem;text-decoration:none;transition:all 0.3s;letter-spacing:1.5px;text-transform:uppercase;}
+.btn-gold:hover{background:rgba(201,168,76,0.08);border-color:var(–gold);box-shadow:var(–glow-gold);transform:translateY(-2px);}
+.hero-metrics{display:flex;position:relative;z-index:2;animation:fadeUp2 1s 0.4s ease both;max-width:700px;margin:0 auto;}
+.hm{flex:1;padding:28px 24px;text-align:center;border-right:1px solid var(–border);position:relative;}
+.hm:last-child{border-right:none;}
+.hm::before{content:’’;position:absolute;top:0;left:50%;transform:translateX(-50%);width:40px;height:1px;background:var(–gradient-gold);opacity:0.4;}
+.hm-val{font-family:‘Cormorant’,serif;font-size:2.4rem;font-weight:600;letter-spacing:-1px;line-height:1;margin-bottom:8px;background:var(–gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hm-label{font-size:0.68rem;color:var(–muted);font-weight:500;letter-spacing:1.5px;text-transform:uppercase;}
+.scroll-hint{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:10px;color:var(–muted);font-size:0.6rem;letter-spacing:3px;text-transform:uppercase;z-index:2;font-family:‘DM Mono’,monospace;}
+.scroll-line{width:1px;height:48px;background:linear-gradient(180deg,var(–gold),transparent);animation:scl 2.5s infinite;}
+@keyframes scl{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* MARQUEE */
+.marquee-wrap{border-top:1px solid var(–border);border-bottom:1px solid var(–border);background:rgba(255,255,255,0.01);overflow:hidden;padding:16px 0;position:relative;z-index:2;}
+.marquee-track{display:flex;gap:56px;animation:marquee 30s linear infinite;width:max-content;}
+.m-item{display:flex;align-items:center;gap:12px;font-size:0.65rem;font-weight:600;color:var(–muted);white-space:nowrap;letter-spacing:3px;text-transform:uppercase;font-family:‘DM Mono’,monospace;}
+.m-dot{width:3px;height:3px;border-radius:50%;background:var(–gold);opacity:0.7;}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* SHARED */
+section{position:relative;z-index:2;}
+.inner{max-width:1200px;margin:0 auto;padding:120px 60px;}
+.section-eyebrow{font-family:‘DM Mono’,monospace;font-size:0.62rem;letter-spacing:4px;text-transform:uppercase;color:var(–gold);margin-bottom:20px;display:flex;align-items:center;gap:14px;}
+.section-eyebrow::after{content:’’;display:block;height:1px;width:48px;background:linear-gradient(90deg,var(–gold),transparent);}
+h2{font-family:‘Cormorant’,serif;font-size:clamp(2.2rem,4vw,3.5rem);font-weight:300;color:var(–white);line-height:1.08;letter-spacing:-0.5px;margin-bottom:16px;}
+h2 strong{font-weight:600;}
+h2 .grad{background:var(–gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.sub{font-size:0.9rem;color:var(–muted2);line-height:1.85;max-width:480px;font-weight:300;}
+
+/* INTRO */
+#intro{background:var(–bg);}
+.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:center;}
+.intro-stat{padding:28px 32px;background:var(–surface);border:1px solid var(–border);border-radius:2px;position:relative;overflow:hidden;transition:all 0.3s;margin-bottom:2px;}
+.intro-stat::before{content:’’;position:absolute;top:0;left:0;width:3px;height:100%;background:var(–gradient);}
+.intro-stat:hover{border-color:rgba(59,107,255,0.25);transform:translateX(4px);}
+.is-val{font-family:‘Cormorant’,serif;font-size:1.8rem;font-weight:600;background:var(–gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-0.5px;line-height:1;margin-bottom:4px;}
+.is-label{font-size:0.75rem;color:var(–muted2);font-weight:400;letter-spacing:0.3px;}
+
+/* SERVICES */
+#services{background:var(–bg2);}
+.svc-top{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:64px;flex-wrap:wrap;gap:24px;}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(–border);}
+.svc{background:var(–surface);padding:44px 36px;position:relative;overflow:hidden;transition:all 0.4s;}
+.svc::after{content:’’;position:absolute;bottom:0;left:0;right:0;height:2px;background:var(–gradient);transform:scaleX(0);transform-origin:left;transition:transform 0.4s;}
+.svc:hover{background:var(–surface2);}
+.svc:hover::after{transform:scaleX(1);}
+.svc-n{font-family:‘DM Mono’,monospace;font-size:0.58rem;color:var(–muted);letter-spacing:3px;margin-bottom:28px;text-transform:uppercase;}
+.svc-ico{font-size:1.6rem;margin-bottom:20px;display:block;}
+.svc-title{font-family:‘Cormorant’,serif;font-size:1.3rem;font-weight:600;color:var(–white);margin-bottom:12px;}
+.svc-desc{font-size:0.82rem;color:var(–muted2);line-height:1.78;margin-bottom:20px;font-weight:300;}
+.tags{display:flex;flex-wrap:wrap;gap:6px;}
+.tag{font-size:0.6rem;padding:4px 10px;border-radius:2px;background:rgba(255,255,255,0.03);border:1px solid var(–border);color:var(–muted);font-weight:500;letter-spacing:0.5px;text-transform:uppercase;font-family:‘DM Mono’,monospace;}
+
+/* RESULTS */
+#results{background:var(–bg);}
+.results-wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.r-cards{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:48px;background:var(–border);}
+.r-card{background:var(–surface);padding:32px 28px;transition:all 0.3s;}
+.r-card:hover{background:var(–surface2);}
+.r-val{font-family:‘Cormorant’,serif;font-size:2.8rem;font-weight:600;letter-spacing:-1px;line-height:1;margin-bottom:8px;background:var(–gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.r-lbl{font-size:0.72rem;color:var(–muted2);font-weight:400;}
+.chart-card{background:var(–surface);border:1px solid var(–border);padding:40px;position:relative;overflow:hidden;}
+.chart-card::before{content:’’;position:absolute;top:-40%;right:-20%;width:400px;height:400px;background:radial-gradient(circle,rgba(59,107,255,0.06) 0%,transparent 70%);}
+.chart-eyebrow{font-family:‘DM Mono’,monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:2px;color:var(–muted);margin-bottom:6px;}
+.chart-big{font-family:‘Cormorant’,serif;font-size:2rem;font-weight:600;color:var(–white);letter-spacing:-0.5px;margin-bottom:32px;}
+.chart-big span{font-size:0.9rem;color:var(–muted);font-family:‘Outfit’,sans-serif;font-weight:300;}
+.bars{height:120px;display:flex;align-items:flex-end;gap:8px;}
+.bar{flex:1;border-radius:2px 2px 0 0;background:rgba(255,255,255,0.04);position:relative;overflow:hidden;}
+.bar::after{content:’’;position:absolute;bottom:0;left:0;right:0;background:var(–gradient);animation:bg 1.5s ease forwards;}
+@keyframes bg{from{height:0}}
+.bar:nth-child(1)::after{height:25%;animation-delay:0.1s}.bar:nth-child(2)::after{height:40%;animation-delay:0.2s}.bar:nth-child(3)::after{height:55%;animation-delay:0.3s}.bar:nth-child(4)::after{height:70%;animation-delay:0.4s}.bar:nth-child(5)::after{height:58%;animation-delay:0.5s}.bar:nth-child(6)::after{height:85%;animation-delay:0.6s}.bar:nth-child(7)::after{height:100%;animation-delay:0.7s}
+.chart-labels{display:flex;justify-content:space-between;font-size:0.62rem;color:var(–muted);margin-top:10px;font-family:‘DM Mono’,monospace;}
+.float1{position:absolute;right:-16px;top:40px;background:var(–surface2);border:1px solid rgba(0,194,255,0.18);border-radius:4px;padding:14px 18px;box-shadow:0 20px 48px rgba(0,0,0,0.5),var(–glow);}
+.float1-val{font-family:‘Cormorant’,serif;font-size:1.6rem;font-weight:600;color:var(–cyan);letter-spacing:-0.5px;line-height:1;}
+.float1-lbl{font-size:0.62rem;color:var(–muted2);margin-top:3px;font-family:‘DM Mono’,monospace;letter-spacing:1px;text-transform:uppercase;}
+.float2{position:absolute;left:-16px;bottom:40px;background:var(–surface2);border:1px solid rgba(201,168,76,0.2);border-radius:4px;padding:14px 18px;box-shadow:0 20px 48px rgba(0,0,0,0.5);}
+
+/* PROCESS */
+#process{background:var(–bg2);}
+.proc-head{text-align:center;margin-bottom:80px;}
+.proc-head .sub{margin:0 auto;text-align:center;}
+.proc-head .section-eyebrow{justify-content:center;}
+.proc-head .section-eyebrow::after{display:none;}
+.proc-head .section-eyebrow::before{content:’’;display:block;height:1px;width:48px;background:linear-gradient(90deg,transparent,var(–gold));}
+.proc-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;}
+.proc-row::before{content:’’;position:absolute;top:28px;left:12.5%;right:12.5%;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.2),rgba(59,107,255,0.2),rgba(201,168,76,0.2),transparent);z-index:0;}
+.proc-step{padding:0 24px;text-align:center;position:relative;z-index:1;}
+.proc-circle{width:56px;height:56px;border-radius:50%;background:var(–surface);border:1px solid var(–border);display:flex;align-items:center;justify-content:center;margin:0 auto 28px;transition:all 0.3s;position:relative;}
+.proc-step:hover .proc-circle{border-color:rgba(201,168,76,0.4);box-shadow:var(–glow-gold);}
+.proc-n{font-family:‘Cormorant’,serif;font-size:1.4rem;font-weight:600;background:var(–gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.proc-ico2{position:absolute;top:-8px;right:-8px;width:22px;height:22px;background:var(–surface2);border:1px solid var(–border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.65rem;}
+.proc-title{font-family:‘Cormorant’,serif;font-size:1.1rem;font-weight:600;color:var(–white);margin-bottom:10px;}
+.proc-desc{font-size:0.78rem;color:var(–muted2);line-height:1.78;font-weight:300;}
+
+/* PRICING */
+#pricing{background:var(–bg);}
+.price-head{text-align:center;margin-bottom:72px;}
+.price-head .sub{margin:0 auto;text-align:center;}
+.price-head .section-eyebrow{justify-content:center;}
+.price-head .section-eyebrow::after{display:none;}
+.price-head .section-eyebrow::before{content:’’;display:block;height:1px;width:48px;background:linear-gradient(90deg,transparent,var(–gold));}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(–border);margin-bottom:2px;}
+.p-card{background:var(–surface);padding:48px 36px;position:relative;transition:all 0.3s;}
+.p-card:hover{background:var(–surface2);}
+.p-card.feat{background:linear-gradient(160deg,#0c1635,#080f28);}
+.feat-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.25);color:var(–gold2);font-size:0.6rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:5px 14px;border-radius:99px;margin-bottom:20px;font-family:‘DM Mono’,monospace;}
+.p-tier{font-family:‘DM Mono’,monospace;font-size:0.62rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(–muted);margin-bottom:20px;}
+.p-price{font-family:‘Cormorant’,serif;font-size:3.5rem;font-weight:600;color:var(–white);letter-spacing:-2px;line-height:1;margin-bottom:4px;}
+.p-card.feat .p-price{background:var(–gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.p-price sup{font-size:1.2rem;letter-spacing:0;vertical-align:top;margin-top:12px;display:inline-block;}
+.p-mo{font-size:0.72rem;color:var(–muted);margin-bottom:32px;}
+.p-div{height:1px;background:var(–border);margin:28px 0;}
+.p-feats{list-style:none;display:flex;flex-direction:column;gap:14px;margin-bottom:36px;}
+.p-feats li{font-size:0.82rem;color:var(–muted2);display:flex;align-items:flex-start;gap:12px;line-height:1.5;font-weight:300;}
+.p-feats li::before{content:’—’;background:var(–gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:700;flex-shrink:0;}
+.p-btn{display:block;text-align:center;padding:14px;border-radius:2px;font-weight:600;font-size:0.75rem;text-decoration:none;transition:all 0.25s;border:1px solid var(–border2);color:var(–white);letter-spacing:1.5px;text-transform:uppercase;}
+.p-btn:hover{border-color:rgba(255,255,255,0.2);background:rgba(255,255,255,0.05);}
+.p-card.feat .p-btn{background:var(–gradient);border-color:transparent;box-shadow:0 8px 28px rgba(59,107,255,0.25);}
+
+/* CUSTOM TIER */
+.custom-card{background:linear-gradient(135deg,#0a0f20,#060810);border:1px solid rgba(201,168,76,0.15);padding:56px 60px;display:grid;grid-template-columns:1fr auto;gap:60px;align-items:center;position:relative;overflow:hidden;transition:all 0.3s;}
+.custom-card::before{content:’’;position:absolute;top:-50%;right:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(201,168,76,0.04) 0%,transparent 65%);}
+.custom-card:hover{border-color:rgba(201,168,76,0.3);box-shadow:var(–glow-gold);}
+.custom-eyebrow{font-family:‘DM Mono’,monospace;font-size:0.62rem;letter-spacing:3px;text-transform:uppercase;color:var(–gold);margin-bottom:16px;}
+.custom-title{font-family:‘Cormorant’,serif;font-size:2.2rem;font-weight:600;color:var(–white);margin-bottom:12px;letter-spacing:-0.3px;}
+.custom-desc{font-size:0.88rem;color:var(–muted2);line-height:1.8;max-width:560px;font-weight:300;}
+.custom-price{font-family:‘Cormorant’,serif;font-size:1.4rem;font-weight:600;color:var(–gold2);letter-spacing:1px;margin-bottom:12px;opacity:0.85;text-align:center;}
+.custom-btn{display:inline-block;background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.3);color:var(–gold2);padding:14px 36px;border-radius:2px;font-size:0.75rem;font-weight:600;text-decoration:none;transition:all 0.25s;letter-spacing:1.5px;text-transform:uppercase;white-space:nowrap;}
+.custom-btn:hover{background:rgba(201,168,76,0.15);border-color:var(–gold);box-shadow:var(–glow-gold);}
+
+/* TESTIMONIALS */
+#testimonials{background:var(–bg2);}
+.t-head{margin-bottom:64px;}
+.t-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(–border);}
+.t-card{background:var(–surface);padding:40px 36px;position:relative;overflow:hidden;transition:all 0.3s;}
+.t-card::before{content:’\201C’;position:absolute;top:-20px;right:28px;font-family:‘Cormorant’,serif;font-size:10rem;color:rgba(59,107,255,0.04);line-height:1;pointer-events:none;}
+.t-card:hover{background:var(–surface2);}
+.t-stars{display:flex;gap:3px;margin-bottom:20px;}
+.star{width:12px;height:12px;background:var(–gradient-gold);-webkit-mask:url(“data:image/svg+xml,%3Csvg xmlns=‘http://www.w3.org/2000/svg’ viewBox=‘0 0 24 24’%3E%3Cpath d=‘M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z’/%3E%3C/svg%3E’) no-repeat center/contain;mask:url(“data:image/svg+xml,%3Csvg xmlns=‘http://www.w3.org/2000/svg’ viewBox=‘0 0 24 24’%3E%3Cpath d=‘M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z’/%3E%3C/svg%3E’) no-repeat center/contain;}
+.t-quote{font-family:‘Cormorant’,serif;font-size:1rem;color:rgba(255,255,255,0.7);line-height:1.75;margin-bottom:28px;font-style:italic;}
+.t-auth{display:flex;align-items:center;gap:14px;}
+.t-av{width:44px;height:44px;border-radius:50%;background:var(–gradient);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.85rem;color:var(–white);flex-shrink:0;font-family:‘Cormorant’,serif;}
+.t-name{font-size:0.85rem;font-weight:600;color:var(–white);}
+.t-role{font-size:0.7rem;color:var(–muted);margin-top:2px;}
+
+/* CTA */
+#cta{background:var(–bg);padding:0;}
+.cta-inner{max-width:1200px;margin:0 auto;padding:0 60px 120px;}
+.cta-box{background:linear-gradient(140deg,#0a1228,#060810);border:1px solid rgba(201,168,76,0.12);padding:100px 80px;text-align:center;position:relative;overflow:hidden;}
+.cta-box::before{content:’’;position:absolute;top:-50%;left:50%;transform:translateX(-50%);width:800px;height:400px;background:radial-gradient(ellipse,rgba(59,107,255,0.07) 0%,transparent 70%);}
+.cta-box::after{content:’’;position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.015) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.015) 1px,transparent 1px);background-size:60px 60px;}
+.cta-content{position:relative;z-index:1;}
+.cta-box h2{font-size:clamp(2.2rem,4vw,3.5rem);margin-bottom:16px;}
+.cta-box .sub{margin:0 auto 48px;text-align:center;}
+.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+
+/* CONTACT */
+#contact{background:var(–bg2);}
+.contact-wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:80px;align-items:start;}
+.contact-left h2{margin-bottom:14px;}
+.contact-left .sub{margin-bottom:48px;}
+.c-infos{display:flex;flex-direction:column;gap:2px;background:var(–border);}
+.c-info{display:flex;align-items:center;gap:16px;padding:20px 24px;background:var(–surface);transition:all 0.25s;}
+.c-info:hover{background:var(–surface2);}
+.c-ico{width:40px;height:40px;border-radius:2px;background:rgba(0,194,255,0.06);border:1px solid rgba(0,194,255,0.1);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;}
+.c-lbl{font-family:‘DM Mono’,monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:1.5px;color:var(–muted);margin-bottom:3px;}
+.c-val{font-size:0.88rem;font-weight:500;color:var(–white);}
+.cf-box{background:var(–surface);border:1px solid var(–border);padding:48px;}
+.cf-ttl{font-family:‘Cormorant’,serif;font-size:1.6rem;font-weight:600;color:var(–white);margin-bottom:8px;letter-spacing:-0.3px;}
+.cf-ttl-sub{font-size:0.78rem;color:var(–muted2);margin-bottom:32px;font-weight:300;}
+.cf-g{margin-bottom:16px;}
+.cf-l{display:block;font-family:‘DM Mono’,monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:1.5px;color:var(–muted);margin-bottom:8px;}
+.cf-i{width:100%;background:var(–bg);border:1px solid var(–border);border-radius:2px;padding:13px 16px;color:var(–white);font-family:‘Outfit’,sans-serif;font-size:0.88rem;outline:none;transition:all 0.25s;font-weight:300;}
+.cf-i:focus{border-color:rgba(59,107,255,0.4);box-shadow:0 0 0 3px rgba(59,107,255,0.06);}
+.cf-i::placeholder{color:var(–muted);}
+.cf-i option{background:var(–surface);}
+textarea.cf-i{resize:vertical;min-height:100px;}
+.cf-row2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.cf-sub{width:100%;background:var(–gradient);color:var(–white);border:none;padding:15px;border-radius:2px;font-family:‘Outfit’,sans-serif;font-weight:600;font-size:0.82rem;cursor:pointer;margin-top:8px;transition:all 0.25s;letter-spacing:1.5px;text-transform:uppercase;box-shadow:0 8px 28px rgba(59,107,255,0.2);}
+.cf-sub:hover{opacity:0.9;transform:translateY(-1px);}
+.form-ok{display:none;background:rgba(0,230,118,0.06);border:1px solid rgba(0,230,118,0.15);border-radius:2px;padding:16px;color:#4ade80;font-size:0.82rem;text-align:center;margin-top:14px;}
+
+/* FOOTER */
+footer{background:var(–bg);border-top:1px solid var(–border);padding:52px 60px;}
+.foot-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:40px;}
+.foot-logo{font-family:‘Cormorant’,serif;font-size:1.4rem;font-weight:600;color:var(–white);text-decoration:none;letter-spacing:3px;text-transform:uppercase;}
+.foot-logo span{background:var(–gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.foot-links{display:flex;gap:28px;list-style:none;flex-wrap:wrap;}
+.foot-links a{font-size:0.65rem;color:var(–muted);text-decoration:none;transition:color 0.2s;letter-spacing:1.5px;text-transform:uppercase;font-family:‘DM Mono’,monospace;}
+.foot-links a:hover{color:var(–gold);}
+.foot-copy{font-size:0.62rem;color:var(–muted);font-family:‘DM Mono’,monospace;letter-spacing:0.5px;}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(36px);transition:all 0.8s cubic-bezier(0.4,0,0.2,1);}
+.rv.on{opacity:1;transform:translateY(0);}
+.d1{transition-delay:0.1s}.d2{transition-delay:0.2s}.d3{transition-delay:0.3s}.d4{transition-delay:0.4s}
+
+/* SCROLL TOP */
+.go-top{position:fixed;bottom:32px;right:32px;width:48px;height:48px;background:transparent;border:1px solid rgba(201,168,76,0.3);color:var(–gold2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;cursor:pointer;z-index:50;opacity:0;transform:translateY(20px);transition:all 0.3s;}
+.go-top.show{opacity:1;transform:translateY(0);}
+.go-top:hover{background:rgba(201,168,76,0.1);box-shadow:var(–glow-gold);}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+.svc-grid{grid-template-columns:1fr 1fr;}
+.results-wrap{grid-template-columns:1fr;}
+.float1,.float2{display:none;}
+.proc-row{grid-template-columns:1fr 1fr;gap:40px;}
+.proc-row::before{display:none;}
+.t-grid{grid-template-columns:1fr;max-width:520px;}
+.contact-wrap{grid-template-columns:1fr;}
+.custom-card{grid-template-columns:1fr;gap:32px;}
+.foot-inner{grid-template-columns:1fr;}
+.intro-grid{grid-template-columns:1fr;}
+.pricing-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:768px){
+.nav-pills,.btn-nav{display:none;}
+.hamburger{display:flex;}
+.inner{padding:80px 28px;}
+.svc-grid{grid-template-columns:1fr;}
+.r-cards{grid-template-columns:1fr 1fr;}
+.proc-row{grid-template-columns:1fr;}
+.pricing-grid{grid-template-columns:1fr;max-width:420px;margin:0 auto 2px;}
+.cta-box{padding:60px 32px;}
+.cta-inner{padding:0 28px 80px;}
+.cf-row2{grid-template-columns:1fr;}
+footer{padding:40px 28px;}
+nav{padding:0 28px;}
+.svc-top{flex-direction:column;}
+.custom-card{padding:40px 28px;}
+.cf-box{padding:32px 24px;}
+.hero-metrics{flex-direction:column;}
+.hm{border-right:none;border-bottom:1px solid var(–border);}
+.hm:last-child{border-bottom:none;}
+}
+</style>
+
+</head>
+<body>
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- NAV -->
+
+<nav id="nav">
+  <a class="logo" href="#hero">Wealthy<span>9</span></a>
+  <div class="nav-pills">
+    <a href="#services">Services</a>
+    <a href="#results">Results</a>
+    <a href="#process">Process</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#testimonials">Reviews</a>
+  </div>
+  <a href="#contact" class="btn-nav">Begin Partnership</a>
+  <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="mobile-menu" id="mm">
+  <button class="m-close" onclick="toggleMenu()">✕</button>
+  <a href="#services" onclick="toggleMenu()">Services</a>
+  <a href="#results" onclick="toggleMenu()">Results</a>
+  <a href="#process" onclick="toggleMenu()">Process</a>
+  <a href="#pricing" onclick="toggleMenu()">Pricing</a>
+  <a href="#testimonials" onclick="toggleMenu()">Reviews</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+</div>
+
+<!-- HERO -->
+
+<section id="hero">
+  <div class="hero-grid"></div>
+  <div class="orb orb1"></div><div class="orb orb2"></div>
+  <div class="orb orb3"></div><div class="orb orb-gold"></div>
+  <div class="hero-eyebrow">Elite Digital Marketing Agency</div>
+  <div class="gold-line"></div>
+  <h1><em>Elevating</em> Brands.<br><strong>Multiplying <span class="grad">Revenue.</span></strong></h1>
+  <p class="hero-tagline">Where AI Strategy Meets Exclusive Execution</p>
+  <p class="hero-sub">Wealthy9 is an elite digital marketing agency founded by LaBrian Edwards — built for businesses that refuse to settle for average. We don't just run campaigns. We architect growth.</p>
+  <div class="hero-btns">
+    <a href="#contact" class="btn-main">Begin Your Journey</a>
+    <a href="#pricing" class="btn-gold">View Exclusive Packages</a>
+  </div>
+  <div class="hero-metrics">
+    <div class="hm"><div class="hm-val">3–5×</div><div class="hm-label">Lead Growth in 90 Days</div></div>
+    <div class="hm"><div class="hm-val">4.2×</div><div class="hm-label">Average Ad Return</div></div>
+    <div class="hm"><div class="hm-val">100%</div><div class="hm-label">Results Guaranteed</div></div>
+  </div>
+  <div class="scroll-hint"><div class="scroll-line"></div>Discover</div>
+</section>
+
+<!-- MARQUEE -->
+
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <div class="m-item"><div class="m-dot"></div>Social Media Management</div>
+    <div class="m-item"><div class="m-dot"></div>Paid Advertising</div>
+    <div class="m-item"><div class="m-dot"></div>Content Strategy</div>
+    <div class="m-item"><div class="m-dot"></div>Brand Identity</div>
+    <div class="m-item"><div class="m-dot"></div>Lead Generation</div>
+    <div class="m-item"><div class="m-dot"></div>Email Marketing</div>
+    <div class="m-item"><div class="m-dot"></div>SEO & Visibility</div>
+    <div class="m-item"><div class="m-dot"></div>Analytics & Reporting</div>
+    <div class="m-item"><div class="m-dot"></div>Social Media Management</div>
+    <div class="m-item"><div class="m-dot"></div>Paid Advertising</div>
+    <div class="m-item"><div class="m-dot"></div>Content Strategy</div>
+    <div class="m-item"><div class="m-dot"></div>Brand Identity</div>
+    <div class="m-item"><div class="m-dot"></div>Lead Generation</div>
+    <div class="m-item"><div class="m-dot"></div>Email Marketing</div>
+    <div class="m-item"><div class="m-dot"></div>SEO & Visibility</div>
+    <div class="m-item"><div class="m-dot"></div>Analytics & Reporting</div>
+  </div>
+</div>
+
+<!-- INTRO -->
+
+<section id="intro">
+  <div class="inner">
+    <div class="intro-grid">
+      <div class="rv">
+        <div class="section-eyebrow">Our Philosophy</div>
+        <h2><strong>Not Every Brand</strong><br>Deserves <span class="grad">Mediocre</span><br>Marketing</h2>
+        <p class="sub" style="margin-top:20px">Founded by LaBrian Edwards, Wealthy9 was built on one belief — elite businesses deserve elite marketing. We combine cutting-edge AI with human creativity to deliver results that most agencies only promise.</p>
+        <div style="margin-top:40px"><a href="#contact" class="btn-main" style="display:inline-block">Work With Us</a></div>
+      </div>
+      <div class="rv d1">
+        <div class="intro-stat"><div class="is-val">LaBrian Edwards</div><div class="is-label">Founder & CEO — Wealthy9 Digital Marketing</div></div>
+        <div class="intro-stat"><div class="is-val">Tameka Daniels</div><div class="is-label">Executive Assistant — Scheduling & Client Relations</div></div>
+        <div class="intro-stat"><div class="is-val">AI-Powered</div><div class="is-label">Every strategy enhanced with cutting-edge AI tools</div></div>
+        <div class="intro-stat"><div class="is-val">90-Day Guarantee</div><div class="is-label">Measurable results or we work free until we deliver</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+
+<section id="services">
+  <div class="inner">
+    <div class="svc-top">
+      <div>
+        <div class="section-eyebrow">What We Do</div>
+        <h2><strong>Six Pillars</strong> of<br><span class="grad">Elite Marketing</span></h2>
+        <p class="sub">Every channel. Every platform. Executed with precision so you can focus on what you do best.</p>
+      </div>
+      <a href="#contact" class="btn-gold">Request a Free Audit</a>
+    </div>
+    <div class="svc-grid">
+      <div class="svc rv"><div class="svc-n">01 / 06</div><div class="svc-ico">📱</div><div class="svc-title">Social Media Management</div><p class="svc-desc">Done-for-you content creation, scheduling, and community management that builds your brand authority and grows your following every month.</p><div class="tags"><span class="tag">Instagram</span><span class="tag">Facebook</span><span class="tag">TikTok</span><span class="tag">LinkedIn</span></div></div>
+      <div class="svc rv d1"><div class="svc-n">02 / 06</div><div class="svc-ico">🎯</div><div class="svc-title">Paid Advertising</div><p class="svc-desc">High-converting Facebook, Instagram and Google ad campaigns engineered to bring in qualified leads and maximize every dollar of your investment.</p><div class="tags"><span class="tag">Meta Ads</span><span class="tag">Google Ads</span><span class="tag">Retargeting</span></div></div>
+      <div class="svc rv d2"><div class="svc-n">03 / 06</div><div class="svc-ico">✍️</div><div class="svc-title">Content Strategy</div><p class="svc-desc">AI-powered content planning and creation that positions you as the undisputed authority in your market — from short-form video to long-form copy.</p><div class="tags"><span class="tag">Reels & Video</span><span class="tag">Copywriting</span><span class="tag">Blog & SEO</span></div></div>
+      <div class="svc rv"><div class="svc-n">04 / 06</div><div class="svc-ico">📧</div><div class="svc-title">Email Marketing</div><p class="svc-desc">Sophisticated automated sequences that nurture leads, re-engage cold contacts, and transform your list into a consistent revenue engine.</p><div class="tags"><span class="tag">Drip Campaigns</span><span class="tag">Newsletters</span><span class="tag">Automation</span></div></div>
+      <div class="svc rv d1"><div class="svc-n">05 / 06</div><div class="svc-ico">🔍</div><div class="svc-title">SEO & Local Visibility</div><p class="svc-desc">Dominate Google when your ideal clients are searching. We optimize your entire digital presence to drive organic traffic that converts into revenue.</p><div class="tags"><span class="tag">On-Page SEO</span><span class="tag">Google Business</span><span class="tag">Local SEO</span></div></div>
+      <div class="svc rv d2"><div class="svc-n">06 / 06</div><div class="svc-ico">📊</div><div class="svc-title">Analytics & Reporting</div><p class="svc-desc">Crystal-clear reporting so you always know precisely what's working, what's generating ROI, and exactly where your next investment should go.</p><div class="tags"><span class="tag">KPI Dashboards</span><span class="tag">ROI Tracking</span><span class="tag">Monthly Reports</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS -->
+
+<section id="results">
+  <div class="inner">
+    <div class="results-wrap">
+      <div>
+        <div class="section-eyebrow">Proven Results</div>
+        <h2><strong>Numbers</strong> That<br><span class="grad">Define Excellence</span></h2>
+        <p class="sub">We don't just run campaigns — we architect revenue engines. Every strategy is tied directly to your bottom line.</p>
+        <div class="r-cards">
+          <div class="r-card rv"><div class="r-val">3–5×</div><div class="r-lbl">Lead increase in first 90 days</div></div>
+          <div class="r-card rv d1"><div class="r-val">4.2×</div><div class="r-lbl">Average return on ad spend</div></div>
+          <div class="r-card rv d2"><div class="r-val">60%</div><div class="r-lbl">Average engagement growth</div></div>
+          <div class="r-card rv d3"><div class="r-val">90</div><div class="r-lbl">Days to measurable results</div></div>
+        </div>
+      </div>
+      <div style="position:relative">
+        <div class="chart-card rv">
+          <div class="chart-eyebrow">Client Revenue Growth</div>
+          <div class="chart-big">+$127,400 <span>in 6 months</span></div>
+          <div class="bars">
+            <div class="bar" style="height:120px"></div><div class="bar" style="height:120px"></div>
+            <div class="bar" style="height:120px"></div><div class="bar" style="height:120px"></div>
+            <div class="bar" style="height:120px"></div><div class="bar" style="height:120px"></div>
+            <div class="bar" style="height:120px"></div>
+          </div>
+          <div class="chart-labels"><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span></div>
+        </div>
+        <div class="float1"><div class="float1-val">+340%</div><div class="float1-lbl">Lead Growth</div></div>
+        <div class="float2">
+          <div style="font-family:'DM Mono',monospace;font-size:0.6rem;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:3px">ROAS</div>
+          <div style="font-family:'Cormorant',serif;font-size:1.5rem;font-weight:600;color:var(--gold2);letter-spacing:-0.5px">4.8×</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+
+<section id="process">
+  <div class="inner">
+    <div class="proc-head">
+      <div class="section-eyebrow">Our Method</div>
+      <h2>From <em>Vision</em> to <span class="grad">Revenue</span><br>in Four Movements</h2>
+      <p class="sub">A meticulous process designed to eliminate guesswork and deliver measurable results from day one.</p>
+    </div>
+    <div class="proc-row">
+      <div class="proc-step rv"><div class="proc-circle"><div class="proc-n">I</div><div class="proc-ico2">📞</div></div><div class="proc-title">Discovery Call</div><p class="proc-desc">We audit your current marketing, identify untapped opportunities, and map out a custom growth strategy — completely complimentary.</p></div>
+      <div class="proc-step rv d1"><div class="proc-circle"><div class="proc-n">II</div><div class="proc-ico2">🎯</div></div><div class="proc-title">Bespoke Strategy</div><p class="proc-desc">A tailored digital marketing blueprint crafted specifically for your industry, goals, and competitive landscape. No templates. No shortcuts.</p></div>
+      <div class="proc-step rv d2"><div class="proc-circle"><div class="proc-n">III</div><div class="proc-ico2">🚀</div></div><div class="proc-title">Precision Launch</div><p class="proc-desc">Our team executes every campaign with surgical precision. You receive weekly updates and complete transparency at every stage.</p></div>
+      <div class="proc-step rv d3"><div class="proc-circle"><div class="proc-n">IV</div><div class="proc-ico2">📈</div></div><div class="proc-title">Scale & Dominate</div><p class="proc-desc">We analyze real data, amplify what works, and relentlessly optimize to compound your results month after month.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+
+<section id="pricing">
+  <div class="inner">
+    <div class="price-head">
+      <div class="section-eyebrow">Investment Tiers</div>
+      <h2>Exclusive Packages for<br><span class="grad">Serious Businesses</span></h2>
+      <p class="sub">Transparent investment tiers with no hidden fees. Every package backed by our 90-day results guarantee.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="p-card rv">
+        <div class="p-tier">Starter</div>
+        <div class="p-price"><sup>$</sup>3,600</div>
+        <div class="p-mo">per month</div>
+        <div class="p-div"></div>
+        <ul class="p-feats">
+          <li>Social media management (2 platforms)</li>
+          <li>12 premium custom posts per month</li>
+          <li>2 targeted ad campaigns</li>
+          <li>Monthly analytics & performance report</li>
+          <li>Community management</li>
+          <li>Dedicated email support</li>
+        </ul>
+        <a href="#contact" class="p-btn">Begin Partnership</a>
+      </div>
+      <div class="p-card feat rv d1">
+        <div class="feat-badge">✦ Most Selected</div>
+        <div class="p-tier">Growth</div>
+        <div class="p-price"><sup>$</sup>5,000</div>
+        <div class="p-mo">per month</div>
+        <div class="p-div"></div>
+        <ul class="p-feats">
+          <li>Social media management (3 platforms)</li>
+          <li>20 posts + professional Reels & video</li>
+          <li>4 full ad campaigns + active management</li>
+          <li>Weekly reporting & strategy calls</li>
+          <li>Email marketing (complete sequence)</li>
+          <li>SEO optimization & visibility</li>
+          <li>Priority dedicated support</li>
+        </ul>
+        <a href="#contact" class="p-btn">Begin Partnership</a>
+      </div>
+      <div class="p-card rv d2">
+        <div class="p-tier">Premium</div>
+        <div class="p-price"><sup>$</sup>7,200</div>
+        <div class="p-mo">per month</div>
+        <div class="p-div"></div>
+        <ul class="p-feats">
+          <li>All platforms fully managed</li>
+          <li>30+ posts + full video production</li>
+          <li>Unlimited ad campaigns</li>
+          <li>Complete email marketing suite</li>
+          <li>Full SEO + content marketing</li>
+          <li>Dedicated senior account manager</li>
+          <li>Daily monitoring & optimization</li>
+          <li>Quarterly brand strategy sessions</li>
+        </ul>
+        <a href="#contact" class="p-btn">Begin Partnership</a>
+      </div>
+    </div>
+
+```
+<!-- CUSTOM TIER -->
+<div class="custom-card rv">
+  <div>
+    <div class="custom-eyebrow">✦ By Consultation · Fully Bespoke</div>
+    <div class="custom-title">Custom Enterprise Package</div>
+    <p class="custom-desc">For businesses that demand the absolute best — a completely bespoke marketing partnership built around your unique vision, goals, and scale. No limits, no templates. Just elite execution tailored exclusively to you. Contact us to discuss your requirements and receive a private proposal.</p>
+  </div>
+  <div style="text-align:center;flex-shrink:0">
+    <div class="custom-price">Pricing Upon Consultation</div>
+    <a href="#contact" class="custom-btn">Request Private Proposal</a>
+  </div>
+</div>
+
+<p style="text-align:center;font-size:0.65rem;color:var(--muted);margin-top:40px;font-family:'DM Mono',monospace;letter-spacing:1.5px;">ALL PACKAGES INCLUDE OUR 90-DAY RESULTS GUARANTEE — MEASURABLE GROWTH OR WE WORK FREE UNTIL WE DELIVER</p>
+```
+
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+
+<section id="testimonials">
+  <div class="inner">
+    <div class="t-head">
+      <div class="section-eyebrow">Client Voices</div>
+      <h2><strong>Results</strong> Spoken by<br>Those Who <span class="grad">Experienced Them</span></h2>
+      <p class="sub">Real outcomes from real businesses who chose Wealthy9 to elevate their brand and multiply their revenue.</p>
+    </div>
+    <div class="t-grid">
+      <div class="t-card rv"><div class="t-stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div><p class="t-quote">"Wealthy9 completely transformed our social media. Within 60 days we went from 800 followers and zero social leads to booking 15+ new clients per month directly from Instagram."</p><div class="t-auth"><div class="t-av">SM</div><div><div class="t-name">Sarah M.</div><div class="t-role">Owner, Glow Med Spa</div></div></div></div>
+      <div class="t-card rv d1"><div class="t-stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div><p class="t-quote">"Our Facebook ads were burning money before Wealthy9. They restructured everything and our cost per lead dropped from $85 to $18. We're now scaling with complete confidence."</p><div class="t-auth"><div class="t-av">JR</div><div><div class="t-name">James R.</div><div class="t-role">CEO, Premier Roofing Co.</div></div></div></div>
+      <div class="t-card rv d2"><div class="t-stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div><p class="t-quote">"I was skeptical about social media for a dental practice. Wealthy9 proved me wrong — we added $22,000 in new patient revenue in just 3 months and our Google reviews doubled."</p><div class="t-auth"><div class="t-av">DL</div><div><div class="t-name">Dr. Kevin L.</div><div class="t-role">Founder, Prestige Dental</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+
+<section id="cta">
+  <div class="cta-inner">
+    <div class="cta-box rv">
+      <div class="cta-content">
+        <div class="section-eyebrow" style="justify-content:center;margin-bottom:24px;"><span>Exclusively Accepting New Clients</span></div>
+        <div class="gold-line"></div>
+        <h2><em>Are You Ready to</em><br><strong><span class="grad">Elevate Your Brand?</span></strong></h2>
+        <p class="sub">Book a complimentary 15-minute strategy session with LaBrian. We'll audit your current marketing, identify what's costing you revenue, and outline a clear path forward — no pressure, no obligation.</p>
+        <div class="cta-btns">
+          <a href="tel:5613023139" class="btn-main">📞 Book Strategy Session</a>
+          <a href="#contact" class="btn-gold">Send an Inquiry</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+  <div class="inner">
+    <div class="contact-wrap">
+      <div class="contact-left">
+        <div class="section-eyebrow">Get In Touch</div>
+        <h2>Speak With<br><span class="grad">LaBrian Edwards</span></h2>
+        <p style="font-size:0.82rem;color:var(--gold2);font-weight:500;margin-bottom:8px;letter-spacing:0.5px;">Founder & CEO — Wealthy9 Digital Marketing</p>
+        <p class="sub">Fill out the form or reach out directly. Our Executive Assistant Tameka Daniels handles all calls and scheduling — LaBrian personally responds to every inquiry within 24 hours.</p>
+        <div class="c-infos" style="margin-top:40px">
+          <div class="c-info"><div class="c-ico">📧</div><div><div class="c-lbl">Email</div><div class="c-val"><a href="mailto:wealthynine99@gmail.com" style="color:inherit;text-decoration:none">wealthynine99@gmail.com</a></div></div></div>
+          <div class="c-info" onclick="window.location='tel:5613023139'" style="cursor:pointer"><div class="c-ico">📞</div><div><div class="c-lbl">Phone / Scheduling</div><div class="c-val"><a href="tel:5613023139" style="color:inherit;text-decoration:none">(561) 302-3139</a></div></div></div>
+          <div class="c-info"><div class="c-ico">🗓️</div><div><div class="c-lbl">Call Scheduling</div><div class="c-val">Tameka Daniels — Executive Assistant</div></div></div>
+          <div class="c-info"><div class="c-ico">📍</div><div><div class="c-lbl">Location</div><div class="c-val">Miami, Florida — Serving Clients Nationwide</div></div></div>
+          <div class="c-info"><div class="c-ico">⏱️</div><div><div class="c-lbl">Response Time</div><div class="c-val">LaBrian responds within 24 hours</div></div></div>
+        </div>
+      </div>
+      <div class="cf-box rv">
+        <div class="cf-ttl">Begin Your Partnership</div>
+        <div class="cf-ttl-sub">Complete the form and LaBrian will be in touch within 24 hours.</div>
+        <div class="cf-row2">
+          <div class="cf-g"><label class="cf-l">First Name</label><input class="cf-i" type="text" placeholder="John" id="fn"></div>
+          <div class="cf-g"><label class="cf-l">Last Name</label><input class="cf-i" type="text" placeholder="Smith" id="ln"></div>
+        </div>
+        <div class="cf-g"><label class="cf-l">Business Email</label><input class="cf-i" type="email" placeholder="john@yourbusiness.com" id="em"></div>
+        <div class="cf-g"><label class="cf-l">Phone Number</label><input class="cf-i" type="tel" placeholder="(305) 000-0000"></div>
+        <div class="cf-g"><label class="cf-l">Business Type</label>
+          <select class="cf-i">
+            <option value="">Select your industry...</option>
+            <option>Med Spa / Aesthetics</option><option>Dental / Healthcare</option>
+            <option>Real Estate</option><option>Roofing / Contractor</option>
+            <option>Fitness / Wellness</option><option>Restaurant / Food</option>
+            <option>E-Commerce</option><option>Law Firm</option><option>Other</option>
+          </select>
+        </div>
+        <div class="cf-g"><label class="cf-l">Investment Level</label>
+          <select class="cf-i">
+            <option value="">Select package interest...</option>
+            <option>Starter — $3,600/month</option>
+            <option>Growth — $5,000/month</option>
+            <option>Premium — $7,200/month</option>
+            <option>Custom Enterprise — Contact for Pricing</option>
+          </select>
+        </div>
+        <div class="cf-g"><label class="cf-l">Tell Us About Your Goals</label><textarea class="cf-i" placeholder="Share your current challenges and what you'd like to achieve..."></textarea></div>
+        <button class="cf-sub" onclick="sendForm()">Submit Inquiry →</button>
+        <div class="form-ok" id="formOk">✅ Inquiry received. LaBrian will personally follow up within 24 hours. For immediate scheduling call (561) 302-3139 and ask for Tameka.</div>
+        <p style="font-size:0.6rem;color:var(--muted);text-align:center;margin-top:16px;font-family:'DM Mono',monospace;letter-spacing:1px;">YOUR INFORMATION IS COMPLETELY CONFIDENTIAL</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="foot-inner">
+    <a class="foot-logo" href="#hero">Wealthy<span>9</span></a>
+    <ul class="foot-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#results">Results</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="foot-copy">© 2025 Wealthy9 Digital Marketing · LaBrian Edwards, Founder</div>
+  </div>
+</footer>
+
+<button class="go-top" id="goTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+document.addEventListener('mousemove',e=>{const g=document.getElementById('cursorGlow');g.style.left=e.clientX+'px';g.style.top=e.clientY+'px';});
+window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',window.scrollY>40);document.getElementById('goTop').classList.toggle('show',window.scrollY>400);});
+function toggleMenu(){document.getElementById('mm').classList.toggle('open');}
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on');}),{threshold:0.08});
+document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}});});
+function sendForm(){const fn=document.getElementById('fn').value.trim();const em=document.getElementById('em').value.trim();if(!fn||!em){alert('Please enter your name and email.');return;}document.getElementById('formOk').style.display='block';const btn=document.querySelector('.cf-sub');btn.textContent='✅ Inquiry Submitted';btn.style.background='rgba(0,230,118,0.15)';btn.disabled=true;}
+</script>
+
+</body>
+</html>
